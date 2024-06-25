@@ -32,15 +32,7 @@ export default function RootLayout({
     <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
       <html lang="en">
         <body className={inter.className}>
-          <ConvexClientProvider>
-            <SignedOut>
-              <SignInButton />
-            </SignedOut>
-            <SignedIn>
-              <UserButton />
-            </SignedIn>
-            {children}
-          </ConvexClientProvider>
+          <ConvexClientProvider>{children}</ConvexClientProvider>
         </body>
       </html>
     </ClerkProvider>
